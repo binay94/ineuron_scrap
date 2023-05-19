@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Course Selection</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color:rgb(180, 233, 233) ;
+                margin: 0;
+                padding: 20px;
+            }
+            
+            h1 {
+                color:rgb(0, 0, 0) ;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+            
+            form {
+                background-color:rgb(180, 233, 233) ;
+                padding: 20px;
+                border-radius: 5px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+                max-width: 500px;
+                margin: 0 auto;
+            }
+            
+            label {
+                display: block;
+                margin-bottom: 10px;
+                color:rgb(0, 0, 0);
+            }
+            
+            select,
+            input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                border: 1px solid #8b0c0c;
+                border-radius: 3px;
+                font-size: 16px;
+                margin-bottom: 20px;
+                box-sizing: border-box;
+            }
+            
+            input[type="submit"] {
+                background-color: #db3e8c;
+                color: rgb(11, 11, 11);
+                cursor: pointer;
+            }
+            
+            input[type="submit"]:hover {
+                background-color: #4CAF50;
+            }
+            
+            input[type="submit"]:focus {
+                outline: none;
+            }
+            
+            .disabled {
+                opacity: 0.5;
+            }
+        </style>
+        <script>
+            function enableSubmitButton() {
+                var category = document.getElementById("category").value;
+                var subcategory = document.getElementById("subcategory").value;
+                var courseName = document.getElementById("course_name").value;
+                var submitButton = document.getElementById("submit_button");
+    
+                if (category && subcategory && courseName) {
+                    submitButton.disabled = false;
+                } else {
+                    submitButton.disabled = true;
+                }
+            }
+        </script>
+    </head>
+<body>
+    <h1>Welcome to Ineuron</h1>
+    <h1>Course Selection</h1>
+    <form action="/" method="post">
+        <label for="category"><strong>Category:</strong></label>
+        <select id="category" name="category">
+            <option value="" {% if not selected_category %}selected{% endif %}>Select Category</option>
+            {% for category, subcategories in categories %}
+                <option value="{{ category }}" {% if selected_category == category %}selected{% endif %}>{{ category }}</option>
+            {% endfor %}
+        </select>
+
+        <label for="subcategory"><strong>Subcategory:</strong></label>
+        <select id="subcategory" name="subcategory" {% if not subcategories %}disabled{% endif %}>
+            <option value="" {% if not selected_subcategory %}selected{% endif %}>Select Sub-Category</option>
+            {% if subcategories %}
+                {% for subcategory in subcategories %}
+                    <option value="{{ subcategory }}" {% if selected_subcategory == subcategory %}selected{% endif %}>{{ subcategory }}</option>
+                {% endfor %}
+            {% endif %}
+        </select>
+
+        <label for="course_name"><strong>Course Name:</strong></label>
+        <select id="course_name" name="course_name" {% if not course_names %}disabled{% endif %}>
+            <option value="" {% if not selected_course_name %}selected{% endif %}>Select Course</option>
+            {% if course_names %}
+                {% for course_name in course_names %}
+                    <option value="{{ course_name }}" {% if selected_course_name == course_name %}selected{% endif %}>{{ course_name }}</option>
+                {% endfor %}
+            {% endif %}
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Course Details</title>
+    <style>
+        body {
+            background-color:rgb(157, 220, 223);
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            color: rgb(7, 2, 2);
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        h2 {
+            margin-top: 20px;
+        }
+
+        img {
+            display: block;
+            margin: 20px auto;
+            max-width: 100%;
+            height: auto;
+        }
+
+        h3 {
+            margin-top: 20px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        li:last-child {
+            margin-bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Course Details</h1>
+    <h2>{{ course.Title }}</h2>
+    <p>{{ course.Description }}</p>
+    
+
+    <h3>Course Information:</h3>
+    <ul>
+        <li>Instructor(s): {{course.Instructors}}</li>
+        <li>Duration: {{ course.Duration }}</li>
+        <li>Language: {{ course.Language }}</li>
+        <li>Price: {{ course.Price }}</li>
+        <li>Requirements: {{ course.Requirements }}</li>
+        <li>Features: {{ course.Features }}</li>
+    </ul>
+
+    <h3>Curriculum:</h3>
+    <ul>
+        {% for title, details in course.Curriculum.items() %}
+            <li>{{ title }}</li>
+            <ul>
+                {% for detail in details %}
+                    <li>{{ detail }}</li>
+                {% endfor %}
+            </ul>
+        {% endfor %}
+    </ul>
+</body>
+</html>

@@ -1,0 +1,7 @@
+bs4 
+BeautifulSoup4 
+PyMongo 
+Requests 
+Flask 
+db-sqlite3 
+FPDF 
