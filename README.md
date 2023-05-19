@@ -1,3 +1,5 @@
+# ineuron scrapping :
+
 1. This API helps to scrape course details from iNeuron website.
 2. First user needs to update the user_input.py file with their MongoDB username, password, file path to save the course details pdf.
 3. pip install requirements.txt to install the required modules to run the api.
@@ -14,19 +16,23 @@
   
   ## Homepage:
   
+  ![Screenshot_6](https://github.com/binay94/ineuron_scrap/assets/116953493/708edec8-f3ed-4d88-ae9b-7f4c9278ba17)
 
+  
+![Screenshot_5](https://github.com/binay94/ineuron_scrap/assets/116953493/10ff3a3e-5b3b-4313-95de-b0c4a349ce5b)
     
   ## Results Page:
   
-
+![Screenshot_7](https://github.com/binay94/ineuron_scrap/assets/116953493/fd2d1248-3ec1-4f24-8ad6-fb64b2d85eab)
   
   ## Mongodb:
   
+![Screenshot_3](https://github.com/binay94/ineuron_scrap/assets/116953493/a271e073-cca6-48c9-913c-b0e59ec5a470)
 
   
   ## PDF: 
  
-  
+  ![Screenshot_9](https://github.com/binay94/ineuron_scrap/assets/116953493/0707612a-dc1d-4c1f-a695-dab76b0b536c)
   
   
   
