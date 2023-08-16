@@ -2,7 +2,7 @@ global:
   application_name: ineuron scrapping
   branch: main
   default_ec2_keyname: null
-  default_platform: Python 3.7
+  default_platform: Python 3.8
   default_region: ap-south-1
   include_git_submodules: true
   instance_profile: null
