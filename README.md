@@ -34,7 +34,9 @@
  
   ![Screenshot_9](https://github.com/binay94/ineuron_scrap/assets/116953493/0707612a-dc1d-4c1f-a695-dab76b0b536c)
   
-  
+  ## Deployment in Elastic Beanstalk :
+
+  ![Screenshot 2023-08-16 155422](https://github.com/binay94/ineuron_scrap/assets/116953493/12b04a7c-9d45-4999-a600-2790441cd81f)
   
   
 
