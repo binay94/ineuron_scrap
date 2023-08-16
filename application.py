@@ -8,7 +8,8 @@ logging.basicConfig(filename='scraper.log', level=logging.ERROR)
 
 
 
-app = Flask(__name__)
+application = Flask(__name__)
+app = application
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
