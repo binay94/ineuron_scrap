@@ -9,6 +9,25 @@
 7. The application uses logging to log all the information.
 8. Data is scraped only for learning purpose and is deleted.
   
+  # Project Structure :
+
+
+      .
+      ├── .ebextensions
+      │   └── python.config  #  # Configuration for AWS Elastic Beanstalk deployment
+      ├── .elasticbeanstalk
+      │   └── config.yml     # Elastic Beanstalk configuration settings
+      ├── courses            # Stores the searched course details in PDF
+      ├── templates          # HTML templates 
+      ├── application.py     # Main script for launching the application and interacting with user inputs
+      ├── courses.py         # Script for handling course-related operations
+      ├── db_op.py           # Script for database operations, including adding data to SQL and MongoDB
+      ├── getpdf.py          # Script for generating PDF files
+      ├── url.py             # Manages URLs 
+      ├── user_input.py      # Contains user-specific input, like MongoDB credentials and file paths
+      ├── utility.py         # Holds utility functions used across the application
+      └── README.md          # Project documentation
+
   
   
   # Output as shown below:
